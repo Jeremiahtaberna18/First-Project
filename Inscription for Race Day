@@ -1,0 +1,25 @@
+let raceNumber = Math.floor(Math.random() * 1000);
+const registeredEarly = false;
+
+const runnersAge = 18
+
+//This is for Youth
+
+if(runnersAge < 18 && registeredEarly) {
+  console.log('Great you can start at 12:30!');
+  console.log(`Your number is ${raceNumber}`);
+} else {
+  console.log('Sorry man you need to be inscripted');
+};
+
+//This for Adults that come late or are Early
+
+if(runnersAge >= 18 && registeredEarly) {
+  console.log('You will race at 9:30 AM');
+  console.log(`Your number is ${raceNumber}`);
+} else if (runnersAge >= 18 && !registeredEarly){
+  console.log('Hey, your late man, you start at 11:00 AM');
+  console.log(`Your number is ${raceNumber}`);
+} else {
+  console.log('Its not your turn sorry')
+}
