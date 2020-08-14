@@ -1,0 +1,55 @@
+//All sleep hours during quarintine
+
+const getSleepHours = (day) => {
+  if(day === 'monday') {
+    return 10;
+  } else if (day === 'tuesday') {
+    return 9;
+  } else if (day === 'wednesday') {
+    return 10;
+  } else if (day === 'thursday') {
+    return 10;
+  } else if (day === 'friday') {
+    return 11;
+  } else if (day === 'saturday') {
+    return 8;
+  } else if (day === 'sunday') {
+    return 12
+  }
+};
+console.log(getSleepHours('tuesday'));
+
+//Actual sleep Hours
+
+const getActualSleepHours = () => 
+  getSleepHours('Monday') + 
+  getSleepHours('Tuesday') + 
+  getSleepHours('Wednesday') + 
+  getSleepHours('Thursday') + 
+  getSleepHours('Friday') + 
+  getSleepHours('Saturday') +
+  getSleepHours('Sunday') +  
+
+
+//Ideal Hours to sleep
+
+const getIdealSleepHours = () => {
+  let idealHours = 7.5;
+  return idealHours * 7;
+};
+
+const calculateSleepDebt = () => {
+ const actualSleepHours = getActualSleepHours();
+ const idealSleepHours = getIdealSleepHours();
+
+if (actualSleepHours === idealSleepHours) {
+  console.log ('You got a good amount of sleep!')
+} else if (actualSleepHours > IdealSleepHpurs) {
+  console.log('You got ' + (idealSleepHours - actualSleepHours) + ' hour(s) more sleep than you normaly have this week. Dont sleep to much.')
+} else if (actualSleepHours < IdealSleepHpurs) {
+  console.log('You got ' + (idealSleepHours - actualSleepHours) + ' hour(s) less sleep than you needed this week. Get some rest.') 
+}
+
+};
+
+calculateSleepDebt();
